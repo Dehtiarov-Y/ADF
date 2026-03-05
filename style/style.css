@@ -1,19 +1,19 @@
 /* =========================================
    1. Настройки и Переменные (Модерн палитра)
    ========================================= */
-   :root {
-    --primary: #6D28D9; 
-    --accent: #A78BFA;  
+:root {
+    --primary: #6D28D9;
+    --accent: #A78BFA;
     --accent-hover: #8B5CF6;
     --highlight: #FBBF24;
     --highlight-hover: #d5a221;
-    --dark-text: #1F2937; 
-    --light-text: #6B7280; 
+    --dark-text: #1F2937;
+    --light-text: #6B7280;
     --bg-white: #FFFFFF;
-    --bg-offset: #F9FAFB; 
+    --bg-offset: #F9FAFB;
     /* Шрифты */
-    --font-heading: 'Syne', sans-serif; 
-    --font-body: 'Inter', sans-serif;   
+    --font-heading: 'Syne', sans-serif;
+    --font-body: 'Inter', sans-serif;
     --section-spacing: 100px;
 }
 
@@ -35,17 +35,32 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: var(--font-heading);
     font-weight: 800;
     color: var(--primary);
     line-height: 1.2;
 }
 
-h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
-h2 { font-size: 2.5rem; }
-h3 { font-size: 1.5rem; margin-bottom: 1rem; }
-p { margin-bottom: 1.5rem; color: var(--light-text); }
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    color: var(--light-text);
+}
 
 .container {
     max-width: 1100px;
@@ -67,7 +82,7 @@ p { margin-bottom: 1.5rem; color: var(--light-text); }
     z-index: 100;
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .logo a {
@@ -77,13 +92,14 @@ p { margin-bottom: 1.5rem; color: var(--light-text); }
 }
 
 .logo-img {
+    height: 40px;
     width: auto;
-    object-fit: contain; 
+    object-fit: contain;
     transition: transform 0.3s ease;
 }
 
 .logo-img:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
 .footer-logo {
@@ -94,10 +110,10 @@ p { margin-bottom: 1.5rem; color: var(--light-text); }
 }
 
 .footer-logo-img {
-    max-height: 60px; 
+    max-height: 60px;
     width: auto;
     object-fit: contain;
-    filter: brightness(0) invert(1); 
+    filter: brightness(0) invert(1);
 }
 
 nav ul {
@@ -115,13 +131,16 @@ nav ul li a {
     transition: color 0.3s;
 }
 
-nav ul li a:hover { color: var(--highlight-hover); }
+nav ul li a:hover {
+    color: var(--highlight-hover);
+}
 
 .btn-nav {
     background-color: var(--highlight);
     color: var(--dark-text) !important;
     padding: 10px 20px;
-    border-radius: 4px; /* Более квадратные углы для модерна */
+    border-radius: 4px;
+    /* Более квадратные углы для модерна */
     transition: all 0.3s ease;
 }
 
@@ -150,7 +169,7 @@ nav ul li a:hover { color: var(--highlight-hover); }
     right: -10%;
     width: 60%;
     height: 120%;
-    background: radial-gradient(circle atƒ center, var(--accent-hover) 0%, rgba(255,255,255,0) 70%);
+    background: radial-gradient(circle atƒ center, var(--accent-hover) 0%, rgba(255, 255, 255, 0) 70%);
     opacity: 0.15;
     filter: blur(60px);
     z-index: -1;
@@ -180,11 +199,12 @@ nav ul li a:hover { color: var(--highlight-hover); }
     margin-top: 40px;
 }
 
-.btn-primary, .btn-secondary {
-    display: inline-flex;       
-    justify-content: center;     
-    align-items: center;         
-    text-align: center;          
+.btn-primary,
+.btn-secondary {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     padding: 14px 32px;
     border-radius: 4px;
     text-decoration: none;
@@ -223,11 +243,22 @@ section {
     padding: var(--section-spacing) 0;
 }
 
-.bg-offset { background-color: var(--bg-offset); }
+.bg-offset {
+    background-color: var(--bg-offset);
+}
 
-.section-header { margin-bottom: 50px; }
-.center-header { text-align: center; }
-.center-header p { max-width: 600px; margin: 0 auto; }
+.section-header {
+    margin-bottom: 50px;
+}
+
+.center-header {
+    text-align: center;
+}
+
+.center-header p {
+    max-width: 600px;
+    margin: 0 auto;
+}
 
 .title-bar {
     width: 60px;
@@ -254,7 +285,7 @@ section {
     background: var(--bg-white);
     padding: 40px 30px;
     border-radius: 12px;
-    border: 1px solid rgba(0,0,0,0.08);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
@@ -263,7 +294,7 @@ section {
 .m-card:hover {
     border-color: var(--highlight-hover);
     transform: translateY(-7px);
-    box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
 }
 
 .card-icon {
@@ -275,18 +306,30 @@ section {
 .m-card::before {
     content: '';
     position: absolute;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 4px;
 }
-.color-1::before { background: var(--primary); }
-.color-2::before { background: var(--accent); }
-.color-3::before { background: var(--highlight); }
+
+.color-1::before {
+    background: var(--primary);
+}
+
+.color-2::before {
+    background: var(--accent);
+}
+
+.color-3::before {
+    background: var(--highlight);
+}
 
 /* =========================================
    5. Форма и Подвал
    ========================================= */
-.registration-section { text-align: center; }
+.registration-section {
+    text-align: center;
+}
 
 .registration-wrapper {
     background: var(--primary);
@@ -295,7 +338,8 @@ section {
     border-radius: 20px;
 }
 
-.registration-wrapper h2, .registration-wrapper p {
+.registration-wrapper h2,
+.registration-wrapper p {
     color: var(--bg-offset);
 }
 
@@ -313,7 +357,11 @@ section {
     color: var(--light-text);
 }
 
-.placeholder-icon { font-size: 40px; display: block; margin-bottom: 20px; }
+.placeholder-icon {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 20px;
+}
 
 .loading-bar {
     width: 50px;
@@ -341,9 +389,20 @@ footer {
    6. Анимации
    ========================================= */
 @keyframes pulse {
-    0% { width: 50px; opacity: 0.5; }
-    50% { width: 100px; opacity: 1; }
-    100% { width: 50px; opacity: 0.5; }
+    0% {
+        width: 50px;
+        opacity: 0.5;
+    }
+
+    50% {
+        width: 100px;
+        opacity: 1;
+    }
+
+    100% {
+        width: 50px;
+        opacity: 0.5;
+    }
 }
 
 /* Классы для JS анимации */
@@ -351,7 +410,7 @@ footer {
     opacity: 0;
     transform: scale(0.95) translateY(30px);
     transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .animate-on-scroll {
@@ -360,7 +419,9 @@ footer {
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-.delayed { transition-delay: 0.2s; }
+.delayed {
+    transition-delay: 0.2s;
+}
 
 .is-visible {
     opacity: 1;
