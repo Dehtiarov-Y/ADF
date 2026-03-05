@@ -6,6 +6,7 @@
     --accent: #A78BFA;  
     --accent-hover: #8B5CF6;
     --highlight: #FBBF24;
+    --highlight-hover: #d5a221;
     --dark-text: #1F2937; 
     --light-text: #6B7280; 
     --bg-white: #FFFFFF;
@@ -115,18 +116,19 @@ nav ul li a {
     transition: color 0.3s;
 }
 
-nav ul li a:hover { color: var(--accent); }
+nav ul li a:hover { color: var(--highlight-hover); }
 
 .btn-nav {
-    background-color: var(--primary);
-    color: var(--bg-white) !important;
+    background-color: var(--highlight);
+    color: var(--dark-text) !important;
     padding: 10px 20px;
     border-radius: 4px; /* Более квадратные углы для модерна */
     transition: all 0.3s ease;
 }
 
 .btn-nav:hover {
-    background-color: var(--accent-hover);
+    background-color: var(--highlight);
+    color: var(--bg-offset) !important;
     box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
 }
 
@@ -149,7 +151,7 @@ nav ul li a:hover { color: var(--accent); }
     right: -10%;
     width: 60%;
     height: 120%;
-    background: radial-gradient(circle at center, var(--accent-hover) 0%, rgba(255,255,255,0) 70%);
+    background: radial-gradient(circle atƒ center, var(--accent-hover) 0%, rgba(255,255,255,0) 70%);
     opacity: 0.15;
     filter: blur(60px);
     z-index: -1;
@@ -192,25 +194,26 @@ nav ul li a:hover { color: var(--accent); }
 }
 
 .btn-primary {
-    background-color: var(--primary);
-    color: var(--bg-white);
+    background-color: var(--highlight);
+    color: var(--dark-text);
     box-shadow: 0 4px 6px -1px rgba(109, 40, 217, 0.2);
 }
 
 .btn-primary:hover {
-    background-color: var(--accent-hover);
+    background-color: var(--highlight);
+    color: var(--bg-white);
     transform: translateY(-2px);
     box-shadow: 0 10px 15px -3px rgba(109, 40, 217, 0.3);
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: var(--primary);
-    border: 2px solid var(--primary);
+    color: var(--dark-text);
+    border: 2px solid var(--highlight);
 }
 
 .btn-secondary:hover {
-    background-color: rgba(109, 40, 217, 0.05);
+    background-color: rgba(191, 152, 36, 0.05);
 }
 
 /* =========================================
