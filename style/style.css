@@ -77,7 +77,6 @@ p { margin-bottom: 1.5rem; color: var(--light-text); }
 }
 
 .logo-img {
-    max-height: 45px; 
     width: auto;
     object-fit: contain; 
     transition: transform 0.3s ease;
@@ -214,6 +213,7 @@ nav ul li a:hover { color: var(--highlight-hover); }
 
 .btn-secondary:hover {
     background-color: rgba(191, 152, 36, 0.05);
+    color: var(--highlight);
 }
 
 /* =========================================
@@ -261,7 +261,7 @@ section {
 }
 
 .m-card:hover {
-    border-color: var(--accent);
+    border-color: var(--highlight-hover);
     transform: translateY(-7px);
     box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1);
 }
@@ -296,7 +296,7 @@ section {
 }
 
 .registration-wrapper h2, .registration-wrapper p {
-    color: var(--bg-white);
+    color: var(--bg-offset);
 }
 
 .form-container-modern {
