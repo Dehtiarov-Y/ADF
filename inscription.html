@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADF | Inscription & Contact</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body class="bg-offset">
+
+    <header class="glass-header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo-abeille.svg" alt="Logo ADF" class="logo-img">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="equipe.html">L'Équipe</a></li>
+                <li><a href="inscription.html" class="btn-nav">S'inscrire / Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section style="margin-top: 100px;">
+        <div class="container animate-pop-in">
+            <div class="section-header">
+                <h2>Passez à l'action</h2>
+                <div class="title-bar"></div>
+            </div>
+
+            <div class="forms-layout">
+                <div class="contact-form">
+                    <h3>Une question ?<br>Écrivez-nous</h3>
+                    <form action="#" method="POST" style="margin-top: 20px;">
+                        <div class="input-group">
+                            <label>Nom complet</label>
+                            <input type="text" placeholder="Votre nom" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Email UHA</label>
+                            <input type="email" placeholder="prenom.nom@uha.fr" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Message</label>
+                            <textarea rows="4" placeholder="Votre message..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-submit">Envoyer le message</button>
+                    </form>
+                </div>
+
+                <div class="contact-form" style="padding: 0; overflow: hidden; background: transparent; box-shadow: none;">
+                    <h3 style="margin-bottom: 20px;">Formulaire d'inscription</h3>
+                    <iframe 
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSfo5ac6VKpHjtLDOjWMToRPvhhXRD35EE4LAv6o57ESPZv1cQ/viewform?embedded=true" 
+                        width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0" style="border-radius: 12px; background: white;">
+                        Chargement…
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
