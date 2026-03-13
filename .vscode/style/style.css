@@ -9,13 +9,11 @@
 }
 
 :root {
-    --primary: #6D28D9;
-    --accent: #A78BFA;
-    --accent-hover: #8B5CF6;
-    --highlight: #FBBF24;
-    --highlight-hover: #d5a221;
+    --primary: #801624;
+    --highlight: #d4af37; /*#FBBF24;*/
+    --highlight-hover: #FBBF24; /*#d5a221;*/
     --dark-text: #1F2937;
-    --light-text: #6B7280;
+    --light-text: #888888; /*#6B7280;*/
     --bg-white: #FFFFFF;
     --bg-offset: #F9FAFB;
     
@@ -39,7 +37,7 @@ body {
 h1, h2, h3 {
     font-family: var(--font-heading);
     color: var(--primary);
-    line-height: 1.1;
+    line-height: 1.2;
     letter-spacing: 1px; /* Anton выглядит лучше с небольшим отступом */
     text-transform: uppercase; /* Anton отлично смотрится в верхнем регистре */
 }
@@ -70,7 +68,7 @@ p { margin-bottom: 1.5rem; color: var(--light-text); }
 
 nav ul { list-style: none; display: flex; align-items: center; gap: 30px; }
 nav ul li a { text-decoration: none; color: var(--dark-text); font-weight: 600; transition: color 0.3s; }
-nav ul li a:hover, nav ul li a.active { color: var(--highlight-hover); }
+nav ul li a:hover, nav ul li a.active { color: var(--highlight); }
 
 .btn-nav {
     background-color: var(--highlight); color: var(--dark-text) !important;
@@ -88,7 +86,7 @@ nav ul li a:hover, nav ul li a.active { color: var(--highlight-hover); }
 
 .hero-bg-shape {
     position: absolute; top: -20%; right: -10%; width: 60%; height: 120%;
-    background: radial-gradient(circle at center, var(--accent-hover) 0%, rgba(255, 255, 255, 0) 70%);
+    background: radial-gradient(circle at center, var(--primary) 0%, rgba(255, 255, 255, 0) 70%);
     opacity: 0.15; filter: blur(60px); z-index: -1;
 }
 
@@ -102,7 +100,7 @@ nav ul li a:hover, nav ul li a.active { color: var(--highlight-hover); }
 
 .hero-3d-placeholder {
     flex: 1; min-width: 300px; height: 500px;
-    border: 3px dashed var(--accent); border-radius: 20px;
+    border: 3px dashed var(--primary); border-radius: 20px;
     display: flex; flex-direction: column; justify-content: center; align-items: center;
     background: rgba(167, 139, 250, 0.05); color: var(--primary); text-align: center;
 }
@@ -112,7 +110,7 @@ nav ul li a:hover, nav ul li a.active { color: var(--highlight-hover); }
     padding: 14px 32px; border-radius: 4px; text-decoration: none; font-weight: 700;
     background-color: var(--highlight); color: var(--dark-text); font-family: var(--font-body); transition: all 0.3s;
 }
-.btn-primary:hover { background-color: var(--primary); color: var(--bg-white); transform: translateY(-3px); }
+.btn-primary:hover { background-color: var(--primary); color: var(--bg-white);}
 
 /* =========================================
    4. Секции и Контент
@@ -126,17 +124,17 @@ section { padding: var(--section-spacing) 0; }
 .modern-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
 .m-card {
     background: var(--bg-white); padding: 40px 30px; border-radius: 12px;
-    border: 1px solid rgba(0, 0, 0, 0.08); transition: transform 0.4s ease; text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.08); transition: transform 0.4s ease, border-color .4s ease; text-align: center;
 }
-.m-card:hover { transform: translateY(-7px); box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1); border-color: var(--highlight); }
+.m-card:hover { transform: translateY(-7px); box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1); border-color: var(--primary); }
 
 /* =========================================
    5. Команда (Новое)
    ========================================= */
 .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-top: 50px; }
 .team-member { text-align: center; }
-.team-photo { width: 150px; height: 150px; border-radius: 50%; background: var(--accent); margin: 0 auto 20px; object-fit: cover; border: 4px solid var(--highlight); }
-.team-role { color: var(--accent-hover); font-weight: 600; margin-bottom: 10px; text-transform: uppercase; font-size: 0.9rem;}
+.team-photo { width: 150px; height: 150px; border-radius: 50%; background: var(--primary); margin: 0 auto 20px; object-fit: cover; border: 4px solid var(--highlight); }
+.team-role { color: var(--primary); font-weight: 600; margin-bottom: 10px; text-transform: uppercase; font-size: 0.9rem;}
 
 /* =========================================
    6. Формы (Новое)
@@ -151,7 +149,7 @@ section { padding: var(--section-spacing) 0; }
     width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-family: var(--font-body); transition: border-color 0.3s;
 }
 .input-group input:focus, .input-group textarea:focus { border-color: var(--primary); outline: none; }
-.btn-submit { width: 100%; border: none; cursor: pointer; }
+.btn-submit { width: 50%; border: none; cursor: pointer; }
 
 /* =========================================
    7. Подвал и Соцсети (Новое)
@@ -165,3 +163,10 @@ footer { background: var(--dark-text); color: var(--bg-white); padding: 60px 0 2
 .animate-pop-in { opacity: 0; transform: scale(0.95) translateY(30px); transition: opacity 0.8s, transform 0.8s; }
 .animate-on-scroll { opacity: 0; transform: translateY(40px); transition: opacity 0.8s, transform 0.8s; }
 .is-visible { opacity: 1; transform: scale(1) translateY(0); }
+
+/**/
+p {font-style: italic}
+.m-card>p {margin-bottom: 0}
+textarea {resize: vertical}
+form {display: flex; flex-direction: column}
+form>button {align-self: center}
