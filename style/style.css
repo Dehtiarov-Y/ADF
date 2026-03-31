@@ -10,17 +10,13 @@
 
 :root {
     --primary: #801624;
+    --afterprimary: #b01f32;
     --highlight: #d4af37;
-    /*#FBBF24;*/
     --highlight-hover: #FBBF24;
-    /*#d5a221;*/
     --dark-text: #060606;
     --light-text: #888888;
-    /*#6B7280;*/
     --bg-white: #FFFFFF;
     --bg-offset: #F9FAFB;
-
-    /* Заменили Syne на ваш Anton */
     --font-heading: 'Anton', sans-serif;
     --font-body: 'Inter', sans-serif;
     --section-spacing: 100px;
@@ -145,20 +141,20 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a.active {
-    color: var(--highlight);
+    color: var(--primary);
 }
 
 .btn-nav {
-    background-color: var(--highlight);
-    color: var(--dark-text) !important;
+    background-color: var(--primary);
+    color: var(--bg-offset) !important;
     padding: 10px 20px;
     border-radius: 50px;
     transition: all 0.3s ease;
 }
 
 .btn-nav:hover {
-    background-color: var(--primary);
-    color: var(--bg-white) !important;
+    background-color: var(--afterprimary);
+    color: var(--bg-offset) !important;
 }
 
 /* =========================================
@@ -233,15 +229,15 @@ nav ul li a.active {
     border-radius: 50px;
     text-decoration: none;
     font-weight: 700;
-    background-color: var(--highlight);
-    color: var(--dark-text);
+    background-color: var(--primary);
+    color: var(--bg-offset);
     font-family: var(--font-body);
     transition: all 0.3s;
 }
 
 .btn-primary:hover {
-    background-color: var(--primary);
-    color: var(--bg-white);
+    background-color: var(--afterprimary);
+    color: var(--bg-offset);
 }
 
 /* =========================================
@@ -418,7 +414,7 @@ footer {
 }
 
 .social-icon:hover {
-    background: var(--highlight);
+    background: var(--afterprimary);
     transform: translateY(-3px);
 }
 
@@ -514,6 +510,7 @@ form>button {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .gallery-item:hover .gallery-overlay {
