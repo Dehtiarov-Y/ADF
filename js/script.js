@@ -1,18 +1,64 @@
-document.addEventListener("DOMContentLoaded", function() {
-    
-    // 1. Анимация при загрузке страницы
+document.addEventListener("DOMContentLoaded", function () {
+
+    // 1. СТРУКТУРА ГАЛЕРЕИ И LIGHTBOX (STRUCTURE DE LA GALERIE)
+    const galleryContainer = document.getElementById('gallery-container');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.lightbox-close');
+
+    if (galleryContainer) {
+        for (let i = 1; i <= 15; i++) {
+            const item = document.createElement('div');
+            item.className = 'gallery-item animate-on-scroll';
+
+            item.innerHTML = `
+                <img src="img/${i}.jpg" alt="Entraînement ADF ${i}" loading="lazy">
+                <div class="gallery-overlay"></div>
+            `;
+
+            // Événement pour ouvrir la photo en grand
+            item.addEventListener('click', () => {
+                const imgSrc = item.querySelector('img').src;
+                lightboxImg.src = imgSrc;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Bloque le scroll
+            });
+
+            galleryContainer.appendChild(item);
+        }
+    }
+
+    // Fermer la lightbox au clic sur le bouton "X"
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Réactive le scroll
+        });
+    }
+
+    // Fermer la lightbox au clic sur le fond noir
+    if (lightbox) {
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    }
+
+    // 2. АНИМАЦИЯ ГЕРОЯ (ANIMATION HERO)
     const heroElements = document.querySelectorAll('.animate-pop-in');
     heroElements.forEach(el => {
         setTimeout(() => {
-             el.classList.add('is-visible');
+            el.classList.add('is-visible');
         }, 150);
     });
 
-    // 2. Intersection Observer для анимации при прокрутке
+    // 3. АНИМАЦИЯ ПРИ СКРОЛЛЕ (INTERSECTION OBSERVER)
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.15 
+        threshold: 0.15
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
@@ -24,13 +70,17 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }, observerOptions);
 
+    // On observe les éléments classiques + les nouveaux items de la galerie
     const scrollElements = document.querySelectorAll('.animate-on-scroll');
     scrollElements.forEach(el => observer.observe(el));
 });
 
 
-//FOOTER
-document.querySelector('footer').innerHTML = `
+// 4. ПОДВАЛ (FOOTER)
+// On s'assure que le footer existe avant d'injecter le HTML
+const footer = document.querySelector('footer');
+if (footer) {
+    footer.innerHTML = `
         <div class="container">
             <img src="img/logo-abeille.svg" alt="Logo" class="logo-img" style="filter: brightness(0) invert(1);">
             <div class="social-links">
@@ -43,3 +93,4 @@ document.querySelector('footer').innerHTML = `
             </div>
             <p>© 2026 Auto Défense Féminine. UHA/IUT Projet.</p>
         </div>`;
+}

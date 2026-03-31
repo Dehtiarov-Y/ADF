@@ -1,70 +1,91 @@
 <!DOCTYPE html>
 <html lang="fr">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>ADF | Accueil</title>
-		<link rel="stylesheet" href="style/style.css">
-		<link rel="shortcut icon" href="img/logo-abeille.svg" type="image/x-icon">
-	</head>
-	<body>
-		<header class="glass-header">
-			<div class="logo">
-				<a href="index.html">
-					<img src="img/logo-abeille.svg" alt="Logo ADF" class="logo-img">
-				</a>
-			</div>
-			<nav>
-				<ul>
-					<li><a href="index.html" class="active">Accueil</a></li>
-					<li><a href="equipe.html">L'Équipe</a></li>
-					<li><a href="inscription.html" class="btn-nav">S'inscrire / Contact</a></li>
-				</ul>
-			</nav>
-		</header>
 
-		<section class="hero">
-			<div class="hero-bg-shape"></div>
-			<div class="hero-layout">
-				<div class="hero-content animate-pop-in">
-					<h1><span class="text-adf">A</span>uto<br><span class="text-adf">D</span>éfense<br><span class="text-adf">F</span>éminine</h1>
-					<span class="hero-subtitle">Votre force - votre sécurité</span>
-					<p>Un team building d'initiation exclusif pour le personnel féminin de l'UHA/IUT. Reprenez confiance dans un cadre bienveillant et moderne.</p>
-					<div style="margin-top: 30px;">
-						<a href="inscription.html" class="btn-primary">Rejoindre la formation</a>
-					</div>
-				</div>
-            
-				<div class="hero-3d-placeholder animate-pop-in">
-					<h3>[ Espace 3D ]</h3>
-				</div>
-			</div>
-		</section>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ADF | Accueil</title>
+	<link rel="stylesheet" href="style/style.css">
+	<link rel="shortcut icon" href="img/logo-abeille.svg" type="image/x-icon">
+</head>
 
-		<section class="program-section bg-offset">
-			<div class="container animate-on-scroll">
-				<div class="section-header">
-					<h2>Le Programme</h2>
-					<div class="title-bar"></div>
-				</div>
-				<div class="modern-cards">
-					<div class="m-card">
-						<h3>Prévention</h3>
-						<p>Apprendre à scanner son environnement et éviter les situations à risque.</p>
-					</div>
-					<div class="m-card">
-						<h3>Techniques</h3>
-						<p>Des gestes simples et efficaces, ne nécessitant pas de force physique.</p>
-					</div>
-					<div class="m-card">
-						<h3>Mindset</h3>
-						<p>Travail sur le langage corporel, la voix et l'assurance.</p>
-					</div>
+<body>
+	<header class="glass-header">
+		<div class="logo">
+			<a href="index.html">
+				<img src="img/logo-abeille.svg" alt="Logo ADF" class="logo-img">
+			</a>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="index.html" class="active">Accueil</a></li>
+				<li><a href="equipe.html">L'Équipe</a></li>
+				<li><a href="inscription.html" class="btn-nav">S'inscrire / Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section class="hero">
+		<div class="hero-bg-shape"></div>
+		<div class="hero-layout">
+			<div class="hero-content animate-pop-in">
+				<h1><span class="text-adf">A</span>uto<br><span class="text-adf">D</span>éfense<br><span
+						class="text-adf">F</span>éminine</h1>
+				<span class="hero-subtitle">Votre force - votre sécurité</span>
+				<p>Un team building d'initiation exclusif pour le personnel féminin de l'UHA/IUT. Reprenez confiance
+					dans un cadre bienveillant et moderne.</p>
+				<div style="margin-top: 30px;">
+					<a href="inscription.html" class="btn-primary">Rejoindre la formation</a>
 				</div>
 			</div>
-		</section>
+
+			<div class="hero-3d-placeholder animate-pop-in">
+				<h3>[ Espace 3D ]</h3>
+			</div>
+		</div>
+	</section>
+
+	<section class="program-section bg-offset">
+		<div class="container animate-on-scroll">
+			<div class="section-header">
+				<h2>Le Programme</h2>
+				<div class="title-bar"></div>
+			</div>
+			<div class="modern-cards">
+				<div class="m-card">
+					<h3>Prévention</h3>
+					<p>Apprendre à scanner son environnement et éviter les situations à risque.</p>
+				</div>
+				<div class="m-card">
+					<h3>Techniques</h3>
+					<p>Des gestes simples et efficaces, ne nécessitant pas de force physique.</p>
+				</div>
+				<div class="m-card">
+					<h3>Mindset</h3>
+					<p>Travail sur le langage corporel, la voix et l'assurance.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="gallery-section">
+		<div class="container animate-on-scroll">
+			<div class="section-header">
+				<h2>Galerie Photos</h2>
+				<div class="title-bar"></div>
+			</div>
+			<div class="gallery-grid" id="gallery-container">
+			</div>
+		</div>
+	</section>
 	
-		<footer></footer>
-		<script src="js/script.js"></script>
-	</body>
+	<div id="lightbox" class="lightbox">
+		<span class="lightbox-close">&times;</span>
+		<img class="lightbox-content" id="lightbox-img">
+	</div>
+
+	<footer></footer>
+	<script src="js/script.js"></script>
+</body>
+
 </html>
